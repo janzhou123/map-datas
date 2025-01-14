@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Maps Data Scraper",
+  "version": "1.0",
+  "description": "Google Maps search assistant",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "downloads",
+    "https://admin.zhouxiaoxiao.cn/*"
+  ],
+  "host_permissions": [
+    "https://admin.zhouxiaoxiao.cn/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://admin.zhouxiaoxiao.cn"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "34": "icons/icon-34.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/maps/*"],
+      "js": ["content/content.js"],
+      "css": ["sidebar/sidebar.css"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["sidebar/sidebar.html"],
+    "matches": ["https://*.google.com/*"]
+  }],
+  "icons": {
+    "34": "icons/icon-34.png",
+    "128": "icons/icon-128.png"
+  }
+} 

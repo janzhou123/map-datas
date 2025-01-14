@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="sidebar-container">
+    <div class="drag-handle">
+      <span class="drag-title">Maps Data Scraper</span>
+      <button id="close-btn" class="close-button">×</button>
+    </div>
+    <div class="search-form">
+      <div class="form-group">
+        <label>关键词：</label>
+        <input type="text" id="keyword" placeholder="请输入关键词">
+        <span class="error-tip" id="keyword-error">请输入关键词</span>
+      </div>
+      <div class="form-group">
+        <label>国家：</label>
+        <input type="text" id="country" placeholder="请输入国家">
+        <span class="error-tip" id="country-error">请输入国家</span>
+      </div>
+      <div class="form-group">
+        <label>地区：</label>
+        <input type="text" id="region" placeholder="请输入地区">
+        <span class="error-tip" id="region-error">请输入地区</span>
+      </div>
+      <button id="search-btn">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        搜  索
+      </button>
+      <div id="results-count" class="results-count hidden">
+        共找到 <span id="count-number">0</span> 条结果
+      </div>
+      <button id="export-btn" class="export-button hidden">
+        <svg class="export-icon" viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        导出结果
+      </button>
+    </div>
+  </div>
+  <div id="loading-overlay" class="loading-overlay hidden">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">正在加载数据...</div>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html> 

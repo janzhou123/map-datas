@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  background: #f9f9f9;
+}
+
+.menu {
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333333;
+  font-size: 13px;
+  transition: background-color 0.2s, color 0.2s;
+  /* margin: 8px 0; */
+  border-radius: 8px;
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+  color: #4285f4;
+}
+
+.menu-icon {
+  width: 25px;
+  height: 25px;
+  fill: #4285f4;
+}
+
+#visit-website .menu-icon {
+  fill: #34a853;  /* Google 绿色 */
+}
+
+#start-work .menu-icon {
+  fill: #4285f4;  /* Google 蓝色 */
+}
+
+.button {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #357ae8;
+} 
